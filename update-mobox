@@ -37,28 +37,27 @@ fi
 echo "export VK_DRIVER_FILES=\"\$VK_ICD_FILENAMES\"" >> $PREFIX/glibc/opt/default-conf/conf/path.conf
 
 
-wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/vkd3d.zip -O vkd3d.zip
+wget https://drive.google.com/file/d/124vVMIw1TBXg5gu4-1-Ry-K3mE5PU29A/view?usp=drivesdk -O vkd3d.zip
 unzip vkd3d.zip
 mv x64 system32
 mv x86 syswow64
 7z a vkd3d.7z sys*
 cp vkd3d.7z $PREFIX/glibc/opt/libs/d3d/vkd3d.7z
 
-wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/mesa-24.2.0-horizon.7z -O turnip-v6.5.7z
+wget https://drive.google.com/file/d/120u-JDmX2vaWU7DPJ8SIgmMfTN88CqZy/view?usp=drivesdk -O turnip-v6.5.7z
 cp turnip-v6.5.7z $PREFIX/glibc/opt/libs/mesa/turnip-v6.5.7z
 
-wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz -O dxvk-dev.tar.gz
+wget https://github.com/doitsujin/dxvk/releases/download/v2.4/dxvk-2.4.tar.gz -O dxvk-dev.tar.gz
 tar xf dxvk-dev.tar.gz
-cd dxvk-2.3.1
 mv x64 system32
 mv x32 syswow64
 7z a dxvk-dev.7z sys*
 cp dxvk-dev.7z $PREFIX/glibc/opt/libs/d3d/dxvk-dev.7z
 
-wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/box64-100524 -O box64
+wget https://drive.google.com/file/d/1220QyN9usVvxtX1-GfpNZq14GXLALndD/view?usp=drivesdk -O box64
 mv box64 $PREFIX/glibc/bin/box64
 
-wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/wine-9.8-glibc-staging-wow64.tar.xz -O wine.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.12/wine-9.12-staging-tkg-amd64.tar.xz -O wine.tar.xz
 mkdir wine
 tar xf wine.tar.xz -C wine
 mv wine/* wine/wine-9.3-vanilla-wow64
@@ -79,42 +78,4 @@ function undo_updater_changes(){
         
 
 }
-
-if [ ! -f storage/downloads/already-seen ]; then
-        clear
-        echo -e "Hola! Soy EmuTesting, o GabiAle97, como prefieras \xF0\x9F\x98\x80"
-        sleep 4
-        echo "Soy el creador de este script..."
-        sleep 4
-        echo "Esto es sumamente EXPERIMENTAL, y si algo sale mal..."
-        sleep 4
-        echo -e "Es posible que tengas que eliminar todos los datos de termux \xF0\x9F\x98\xA2"
-        sleep 4
-        echo "..."
-        sleep 2
-        echo "..."
-        sleep 2
-        echo -e "\U1F923 Debiste ver tu cara! \U1F923"
-        sleep 4
-        echo "Si es experimental, por supuesto"
-        sleep 4
-        echo -e "Peeeero hice un backup con los archivos originales para que puedas restaurarlos \xF0\x9F\x98\x80"
-        sleep 4
-        echo -e "Corriendo \e[1mundo_updater_changes\e[0m debería volver todo a la normalidad"
-        sleep 4
-        echo -e "De todos modos, puedes avisarme en https://github.com/GabiAle97/mobox-updater/issues para que pueda tomar acciones \xF0\x9F\x98\x80"
-        sleep 4
-        echo -e "Ahora deberías salir de termux con \e[1mexit\e[0m y volver a entrar para que las variables se carguen" 
-        sleep 4
-        echo -e "Me despido! Pero antes, te propongo un trato..." 
-        sleep 4
-        echo -e "Si este script hace que tus juegos funcionen mejor, ve a https://youtube.com/@EmuTesting?si=-PW83qSOo2b_VFZH y hazmelo saber suscribiendote \U1F911"
-        sleep 4
-        echo -e "De hecho, tengo un video jugando a Resident Evil Village usando este script, claro. Si quieres verlo, está acá: https://youtu.be/ZzCHjD8ZwOY"
-        sleep 4
-        echo -e "Eso es todo! Adios! \U1FAE1"
-        touch storage/downloads/already-seen
-        sleep 4
-        echo -e "Este mensaje se autodestruirá! CORRE! \U1F4A3"
-fi
 
