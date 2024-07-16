@@ -54,7 +54,7 @@ mv x32 syswow64
 7z a dxvk-dev.7z sys*
 cp dxvk-dev.7z $PREFIX/glibc/opt/libs/d3d/dxvk-dev.7z
 
-wget https://drive.google.com/file/d/1220QyN9usVvxtX1-GfpNZq14GXLALndD/view?usp=drivesdk -O box64
+wget https://github.com/Xaarrt/Teatu/blob/f9a1f5457cb85b8118a3b21c1d0f3966b9f0330c/box64-arm1 -O box64
 mv box64 $PREFIX/glibc/bin/box64
 
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.12/wine-9.12-staging-tkg-amd64.tar.xz -O wine.tar.xz
