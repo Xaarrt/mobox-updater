@@ -55,7 +55,7 @@ mv x32 syswow64
 7z a dxvk-dev.7z sys*
 cp dxvk-dev.7z $PREFIX/glibc/opt/libs/d3d/dxvk-dev.7z
 
-wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/box64-100524 -O box64
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1220QyN9usVvxtX1-GfpNZq14GXLALndD' -O box64
 mv box64 $PREFIX/glibc/bin/box64
 
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=14xYi12a_hjUP2g4joQaU9sLAFkmPjq4Z' -O wine.tar.xz
