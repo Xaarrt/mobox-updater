@@ -37,8 +37,8 @@ fi
 echo "export VK_DRIVER_FILES=\"\$VK_ICD_FILENAMES\"" >> $PREFIX/glibc/opt/default-conf/conf/path.conf
 
 
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=124vVMIw1TBXg5gu4-1-Ry-K3mE5PU29A' -O vkd3d.zip
-unzip vkd3d.zip
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=124vVMIw1TBXg5gu4-1-Ry-K3mE5PU29A' -O vkd3d.7z
+unzip vkd3d.7z
 mv x64 system32
 mv x86 syswow64
 7z a vkd3d.7z sys*
