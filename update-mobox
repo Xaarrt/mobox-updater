@@ -37,8 +37,8 @@ fi
 echo "export VK_DRIVER_FILES=\"\$VK_ICD_FILENAMES\"" >> $PREFIX/glibc/opt/default-conf/conf/path.conf
 
 
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15FcbOTN_JbtUfzPXTmY8msQ5S9KavgU9' -O vkd3d.7z
-7z x vkd3d.7z
+wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/vkd3d.zip -O vkd3d.zip
+unzip vkd3d.zip
 mv x64 system32
 mv x86 syswow64
 7z a vkd3d.7z sys*
@@ -47,14 +47,15 @@ cp vkd3d.7z $PREFIX/glibc/opt/libs/d3d/vkd3d.7z
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15988xQ3C1gXaFMIr7sLv4iafdIekf5fL' -O turnip-v6.5.7z
 cp turnip-v6.5.7z $PREFIX/glibc/opt/libs/mesa/turnip-v6.5.7z
 
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15NiVMkWJ2iIS8B6pmwyw3kznfMXd6836' -O dxvk-dev.7z
-7z x dxvk-dev.7z
+wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz -O dxvk-dev.tar.gz
+tar xf dxvk-dev.tar.gz
+cd dxvk-2.3.1
 mv x64 system32
 mv x32 syswow64
 7z a dxvk-dev.7z sys*
 cp dxvk-dev.7z $PREFIX/glibc/opt/libs/d3d/dxvk-dev.7z
 
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1220QyN9usVvxtX1-GfpNZq14GXLALndD' -O box64
+wget https://github.com/GabiAle97/mobox-updater/releases/download/mesa/box64-100524 -O box64
 mv box64 $PREFIX/glibc/bin/box64
 
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=14xYi12a_hjUP2g4joQaU9sLAFkmPjq4Z' -O wine.tar.xz
