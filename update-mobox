@@ -47,9 +47,8 @@ cp vkd3d.7z $PREFIX/glibc/opt/libs/d3d/vkd3d.7z
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15988xQ3C1gXaFMIr7sLv4iafdIekf5fL' -O turnip-v6.5.7z
 cp turnip-v6.5.7z $PREFIX/glibc/opt/libs/mesa/turnip-v6.5.7z
 
-wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz -O dxvk-dev.tar.gz
-tar xf dxvk-dev.tar.gz
-cd dxvk-2.3.1
+wget wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=155VHx5lVQoeDArQJPMuIUuW4_ChrC6SB' -O dxvk-dev.7z
+unzip dxvk-dev.7z
 mv x64 system32
 mv x32 syswow64
 7z a dxvk-dev.7z sys*
