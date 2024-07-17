@@ -37,7 +37,7 @@ fi
 echo "export VK_DRIVER_FILES=\"\$VK_ICD_FILENAMES\"" >> $PREFIX/glibc/opt/default-conf/conf/path.conf
 
 
-wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=124vVMIw1TBXg5gu4-1-Ry-K3mE5PU29A' -O vkd3d.7z
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15FcbOTN_JbtUfzPXTmY8msQ5S9KavgU9' -O vkd3d.7z
 unzip vkd3d.7z
 mv x64 system32
 mv x86 syswow64
@@ -47,7 +47,7 @@ cp vkd3d.7z $PREFIX/glibc/opt/libs/d3d/vkd3d.7z
 wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15988xQ3C1gXaFMIr7sLv4iafdIekf5fL' -O turnip-v6.5.7z
 cp turnip-v6.5.7z $PREFIX/glibc/opt/libs/mesa/turnip-v6.5.7z
 
-wget wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=155VHx5lVQoeDArQJPMuIUuW4_ChrC6SB' -O dxvk-dev.7z
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=15DESfi2rfXnYgTMNCL7DNIZqn2-6dMZQ' -O dxvk-dev.7z
 unzip dxvk-dev.7z
 mv x64 system32
 mv x32 syswow64
