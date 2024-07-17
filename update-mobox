@@ -37,27 +37,28 @@ fi
 echo "export VK_DRIVER_FILES=\"\$VK_ICD_FILENAMES\"" >> $PREFIX/glibc/opt/default-conf/conf/path.conf
 
 
-wget https://github.com/Xaarrt/Filesw/blob/main/vkd3d-proton-2.13.7z -O vkd3d.zip
+wget https://github.com/Xaarrt/Teatu/blob/main/vkd3d-proton-2.13.7z -O vkd3d.zip
 unzip vkd3d.zip
 mv x64 system32
 mv x86 syswow64
 7z a vkd3d.7z sys*
 cp vkd3d.7z $PREFIX/glibc/opt/libs/d3d/vkd3d.7z
 
-wget https://github.com/K11MCH1/AdrenoToolsDrivers/releases/download/v24.2.0_r20/turnip_v24.2.0_R20.zip -O turnip-v6.5.7z
+wget https://github.com/Xaarrt/Teatu/blob/main/mesa-24.2.0-turnip-230624.7z -O turnip-v6.5.7z
 cp turnip-v6.5.7z $PREFIX/glibc/opt/libs/mesa/turnip-v6.5.7z
 
-wget https://github.com/doitsujin/dxvk/releases/download/v2.4/dxvk-2.4.tar.gz -O dxvk-dev.tar.gz
+wget https://github.com/doitsujin/dxvk/releases/download/v2.3.1/dxvk-2.3.1.tar.gz -O dxvk-dev.tar.gz
 tar xf dxvk-dev.tar.gz
+cd dxvk-2.3.1
 mv x64 system32
 mv x32 syswow64
 7z a dxvk-dev.7z sys*
 cp dxvk-dev.7z $PREFIX/glibc/opt/libs/d3d/dxvk-dev.7z
 
-wget https://github.com/Xaarrt/Teatu/blob/f9a1f5457cb85b8118a3b21c1d0f3966b9f0330c/box64-arm1 -O box64
+wget https://github.com/Xaarrt/Teatu/blob/main/box64-arm1 -O box64
 mv box64 $PREFIX/glibc/bin/box64
 
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/9.12/wine-9.12-staging-tkg-amd64.tar.xz -O wine.tar.xz
+wget https://github.com/Xaarrt/Teatu/blob/main/wine-9.11-staging-amd64-wow64.tar.xz -O wine.tar.xz
 mkdir wine
 tar xf wine.tar.xz -C wine
 mv wine/* wine/wine-9.3-vanilla-wow64
